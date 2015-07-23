@@ -110,5 +110,18 @@ def swissPairings():
         id2: the second player's unique id
         name2: the second player's name
     """
+    DB = connect()
+    cursor = DB.cursor()
+    query = "SELECT * FROM playerStandings"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    pairings = []
+    count = len(results)
+
+    for i in range(0, count, 2):
+        paired_list = (results[i][0], results[i][1], results[i + 1][0], results[i + 1][1])
+        pairings.append(paired_list)
+    DB.close()
+    return pairings
 
 
