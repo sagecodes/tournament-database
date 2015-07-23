@@ -1,12 +1,12 @@
 # Swiss Tournament Database
-### Created to meet requirements for project 2 in the Udacity Full Stack Nanodegree program
+### Created to meet requirements for project 2 in the [Udacity Full Stack Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004) program
 ## Files
 * tournament.py: Constructs the swiss tournament rules using DB API to interact with tournamet.sql
 * tournament.sql: SQL databases, tables, and views
 * tournament_test.py: Minimum test requirements for swiss pairing system.
 
 ## Dependencies(Reccmended)
-It's recemended to use the latest vagrant virtual machine installed in the relational databases Udacity course. If using your own system you may need to adjeust the steps accoridingly. You will atleast need posgres install on you system.
+It's recemended to use the latest vagrant virtual machine installed in the relational databases [Udacity course](https://www.udacity.com/course/intro-to-relational-databases--ud197). If using your own system you may need to adjeust the steps accoridingly. You will atleast need posgres install on you system.
 
 * Python 2.7.10
 * PostgreSQL 9.4.2
@@ -16,7 +16,7 @@ It's recemended to use the latest vagrant virtual machine installed in the relat
 
 To simply make sure the project passes the pre-written tests run: `python tournament_test.py`
 
-##Helpful sources used during creation:
+##Other helpful sources used during creation:
 * [Treehouse:](http://teamtreehouse.com/) Python collections
 * [Lynda:](http://www.lynda.com/) Intro to relation databases
 * [Resource on making views with joins](http://www.w3resource.com/sql/creating-views/create-view-with-join.php)
