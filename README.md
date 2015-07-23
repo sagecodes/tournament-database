@@ -12,7 +12,9 @@ It's recemended to use the latest vagrant virtual machine installed in the relat
 * PostgreSQL 9.4.2
 
 ##How to use:
- Open postgres terminal window in your project directory through the terminal by calling: `psql`. Connect to the database: `\i tournament.sql` You should see a database, 2 tables and 1 view being created.
+*Note: the SQL file contains a statement to drop an existing database if one named tournament already exists in the directory. Use caution if you already have one named that!*
+
+Open postgres terminal window in your project directory through the terminal by calling: `psql`. Connect to the database: `\i tournament.sql` You should see a database, 2 tables and 1 view being created.
 
 To simply make sure the project passes the pre-written tests run: `python tournament_test.py`
 
@@ -24,3 +26,4 @@ To simply make sure the project passes the pre-written tests run: `python tourna
 * [More on cursor and dictionaries](http://initd.org/psycopg/docs/extras.html)
 * [Python DB API](https://wiki.python.org/moin/UsingDbApiWithPostgres)
 * [keyed lists](http://www2.lib.uchicago.edu/keith/tcl-course/topics/lists.html)
+* [Why tuples have an L prefix](http://stackoverflow.com/questions/11764713/why-do-integers-in-database-row-tuple-have-an-l-suffix)

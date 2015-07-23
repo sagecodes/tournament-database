@@ -62,8 +62,8 @@ def registerPlayer(name):
 def playerStandings():
     """Returns a list of the players and their win records, sorted by wins.
 
-    The first entry in the list should be the player in first place, or a player
-    tied for first place if there is currently a tie.
+    The first entry in the list should be the player in first place,
+    or a player tied for first place if there is currently a tie.
 
     Returns:
       A list of tuples, each of which contains (id, name, wins, matches):
@@ -90,7 +90,8 @@ def reportMatch(winner, loser):
     """
     DB = connect()
     cursor = DB.cursor()
-    cursor.execute("INSERT INTO match (winner, loser) VALUES (%s, %s)", (winner, loser,))
+    cursor.execute("INSERT INTO match (winner, loser) VALUES (%s, %s)",
+                   (winner, loser,))
     DB.commit()
     DB.close()
 
@@ -118,10 +119,11 @@ def swissPairings():
     pairings = []
     count = len(results)
 
+    # Count rows and increment by 2 for pairing using range.
+    # Include Name & id columns.
     for i in range(0, count, 2):
-        paired_list = (results[i][0], results[i][1], results[i + 1][0], results[i + 1][1])
+        paired_list = (results[i][0], results[i][1],
+                       results[i + 1][0], results[i + 1][1])
         pairings.append(paired_list)
     DB.close()
     return pairings
-
-
