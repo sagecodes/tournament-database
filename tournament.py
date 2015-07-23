@@ -72,6 +72,13 @@ def playerStandings():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
+    DB = connect()
+    cursor = DB.cursor()
+    query = "SELECT * FROM playerStandings;"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    DB.close()
+    return results
 
 
 def reportMatch(winner, loser):
