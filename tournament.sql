@@ -18,3 +18,11 @@ CREATE TABLE match(
 				id SERIAL PRIMARY KEY,
 				loser INT NOT NULL DEFAULT 0,
 				winner INT NOT NULL DEFAULT 0);
+
+CREATE VIEW playerStandings
+AS SELECT player.id, player.name,
+(SELECT count(*) FROM match WHERE match.winner = player.id ) as won,
+(SELECT count(*) FROM match WHERE player.id in (winner, loser)) as played
+FROM player
+GROUP BY player.id
+ORDER BY won DESC;
