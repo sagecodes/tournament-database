@@ -5,7 +5,7 @@
 * tournament.sql: SQL databases, tables, and views
 * tournament_test.py: Minimum test requirements for swiss pairing system.
 
-## Dependencies(Reccmended)
+## Dependencies(Recommended)
 It's recemended to use the latest vagrant virtual machine installed in the relational databases [Udacity course](https://www.udacity.com/course/intro-to-relational-databases--ud197). If using your own system you may need to adjeust the steps accoridingly. You will atleast need posgres install on you system.
 
 * Python 2.7.10
